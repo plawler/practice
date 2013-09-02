@@ -3,13 +3,6 @@ package practice.strings;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created with IntelliJ IDEA.
- * User: plawler
- * Date: 9/2/13
- * Time: 10:43 AM
- * To change this template use File | Settings | File Templates.
- */
 public class Duplicates {
 
     static private boolean containsDuplicateCharacters(String input) {
