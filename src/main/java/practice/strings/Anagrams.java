@@ -17,7 +17,6 @@ public class Anagrams {
 
     private static boolean anagrams(String first, String second) {
         if (first.length() != second.length()) return false;
-
         boolean[] buffer = new boolean[256];
         for (char c : first.toCharArray()) {
             buffer[c] = true;
