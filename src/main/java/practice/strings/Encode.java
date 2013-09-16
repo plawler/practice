@@ -17,7 +17,7 @@ public class Encode {
     private static String encode(String url) {
         final char[] replacement = new char[] {'%', '2', '0'};
         char[] origin = url.toCharArray();
-        char[] buffer = new char[origin.length * 2]; // buffer == 16
+        char[] buffer = new char[origin.length * 2];
 
         int offset = 0;
         for (int i = 0; i < origin.length; i++) {
