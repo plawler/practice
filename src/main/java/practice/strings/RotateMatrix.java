@@ -17,7 +17,6 @@ public class RotateMatrix {
                 matrix[i][j] = counter;
                 counter++;
             }
-
         }
 
         int[][] rotated = rotate(matrix);
