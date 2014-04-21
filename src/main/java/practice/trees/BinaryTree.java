@@ -1,5 +1,7 @@
 package practice.trees;
 
+import java.util.Stack;
+
 /**
  * Created with IntelliJ IDEA.
  * User: paul
@@ -81,6 +83,17 @@ public class BinaryTree {
         return root;
     }
 
+    public static void traverseNoRecurse(BinaryTree tree) {
+        Stack<Node> stack = new Stack<Node>();
+        stack.push(tree.root());
+        while (!stack.empty()) {
+            Node n = stack.pop();
+            System.out.println(n);
+            if (n.right != null) stack.push(n.right);
+            if (n.left != null) stack.push(n.left);
+        }
+    }
+
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
         tree.insert(40, "Paul");
@@ -98,6 +111,9 @@ public class BinaryTree {
         tree.traversePreOrder(tree.root());
         System.out.println("Post order...");
         tree.traversePostOrder(tree.root());
+
+        System.out.println("No recursion...");
+        traverseNoRecurse(tree);
 
         System.out.println("Search for Grigio(5)...");
         System.out.println(tree.find(4));
